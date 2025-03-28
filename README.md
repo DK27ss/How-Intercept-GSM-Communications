@@ -4,9 +4,9 @@
 
 ## Overview
 
-Following on from my post on listening for ATC signals, I thought it would be interesting to also share with you this post on intercepting GSM signals.
+Following on from my post on listening for `ATC` signals, I thought it would be interesting to also share with you this post on intercepting `GSM` signals.
 
-Let me remind you that intercepting and decoding GSM signals that don't belong to you is strictly forbidden and illegal.
+Let me remind you that intercepting and decoding `GSM` signals that don't belong to you is strictly forbidden and illegal.
 
 In mobile telephony, the equipment used by network users is called Mobile Station `(MS)`, and the equipment responsible for communicating directly with the `MS` is called Base Transceiver Station `(BTS)`.
 
