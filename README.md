@@ -47,6 +47,8 @@ I recommend the gr-gsm [fork](https://github.com/bkerler/gr-gsm) for `GNU RADIO`
     mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
     make
 
+![Capture](https://github.com/user-attachments/assets/4159b9b2-6837-4d70-8e64-43ee380d693d)
+
 Once `gr-gsm` has been installed, simply browse the directories to launch the various tools:
 
     grgsm_scanner 
