@@ -69,12 +69,14 @@ You can also be more precise with the following command
 
     grgsm_scanner -s 2e6 -p 0 -g 50 --speed=3 -v
 
+// Syntax
+
     sample rate with -s or --samp-rate=. The default value is 2000000.
     frequency correction with -p or --ppm=. The default value is zero. It can be used to compensate for receiver hardware faults.
     gain with -g or --gain=. The default value is 24, which can be increased in the event of poor signal reception.
     the speed at which the software scans with --speed= between zero and five. The default value is four. Zero corresponds to the slowest speed and five to the fastest.
 
-This lets us know which ARFCNs or frequencies are being used by surrounding BTSs, and thus which frequency(s) it's worth trying to capture.
+This lets us know which `ARFCNs` or frequencies are being used by surrounding `BTSs`, and thus which frequency(s) it's worth trying to capture.
 
 ![found_ccch](https://github.com/user-attachments/assets/c01582a1-465c-4672-96ed-68d407a6fb1a)
 
@@ -82,7 +84,7 @@ Even without recognition, it is still possible to use freq-by-freq to find the f
 
 Once this has been done, we can move on to using `grgsm_livemon`
 
-Next, open `wireshark` with the following command, or manually if you have problems opening it in CLI
+Next, open `wireshark` with the following command, or manually if you have problems opening it in `CLI`
 
     sudo wireshark-gtk -k -f udp -Y gsmtap -i lo &
     
