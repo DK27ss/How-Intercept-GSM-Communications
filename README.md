@@ -93,6 +93,7 @@ Next, open `wireshark`, grgsm_livemon, it sends data in GSMTAP format on the loo
 This will enable you to check that data is being intercepted. It can also be used if you need to search for frequencies manually to validate correct reception.
 
 https://github.com/user-attachments/assets/1bd87b6c-6e73-40ef-9788-73c48bbe1dd8
+https://github.com/user-attachments/assets/e1a3189a-e07d-4051-975f-107e53540b3e
 
 Congratulations, you've just intercepted GSM communications. :p
 
