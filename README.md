@@ -35,7 +35,13 @@ The `174 channels` each have eight time slots `(TS)` of around `577 μs`. They a
 
 To guarantee confidentiality, communications are normally encrypted. The `A5/1`, developed in 1987, is supposed to fulfill this role. In 2009, it was broken using resources accessible to all. In 1989, the `A5/2` was developed for countries where the law did not allow the use of the `A5/1`. Due to its weakness, it is not used. Released in 1999, the `A5/3`, used for `3G communications`, is intended to replace the `A5/1`. Although theoretical attacks on the `A5/3` exist, in practice they are not significant. In fact, in France, the `A5/1` is still in the majority.
 
+## GR-GSM & Dragon
+
+// DragonOS Focal
+
 I recommend installing the `DragonOS Focal` distribution, which simplifies the work with most of the tools already installed.
+
+// GR-GSM Forked for GNU RADIO 3.10-3.11
 
 I recommend the gr-gsm [fork](https://github.com/bkerler/gr-gsm) for `GNU RADIO` versions `3.10-3.11`. I've encountered incompatibility problems, but the fork here works.
 
@@ -124,8 +130,38 @@ If you want to go further, you can use the following command, but I won't go any
 
     grgsm_decode -c capture.cfile -a 5 -m SDCCH8 -t 1 -e 1 -k KEY (Ex: F5C55DB5E6E8B694)
 
-This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfold `TP-User-Data` to read the contents of the `SMS`. :p
+This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfold `TP-User-Data` to read the contents of the `SMS` :p
 
 But it is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
 
 Open-source tools such as IMSI-catcher, GsmEvil2 and Airprobe can also produce very interesting results. 
+
+A quick look at the results of these tools ^^
+
+## IMSI-Catcher
+
+![imsicatch](https://github.com/user-attachments/assets/8168e20e-8f96-4b68-bb6c-430f60fef75c)
+
+    git clone https://github.com/Oros42/IMSI-catcher
+    cd IMSI-catcher
+    sudo python3 simple_IMSI-catcher.py -h
+
+`Dragon` saves us time with the prerequisites already natively installed in the `OS`. All we have to do is run our commands.
+
+![requirements](https://github.com/user-attachments/assets/1f75a914-0f0f-4297-b304-6c0993793f5c)
+![imsi](https://github.com/user-attachments/assets/f7bdb296-2a74-4a3d-98f0-a8fb9193a355)
+
+We can use the `-h` command to `list` the `available options`, as with any other `CLI` program.
+
+Now, if we want to run an interception, all we have to do is use the following command with the `-s` argument.
+
+    sudo python3 simple_IMSI-catcher.py -s
+
+We also need to start listening with `grgsm_livemon`
+
+![livemon_2](https://github.com/user-attachments/assets/924da950-0a4d-4431-b928-c6f47dfbb4e0)
+
+https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
+
+
+
