@@ -84,7 +84,7 @@ Even without recognition, it is still possible to use freq-by-freq to find the f
 
 Once this has been done, we can move on to using `grgsm_livemon`
 
-Next, open `wireshark` with the following command, or manually if you have problems opening it in `CLI`
+Next, open `wireshark`, grgsm_livemon, it sends data in GSMTAP format on the loopback interface on UDP port 4729. So, to see the data, before running grgsm_decode, we launch wireshark with the following command, or manually if you have problems opening it in `CLI`.
 
     sudo wireshark-gtk -k -f udp -Y gsmtap -i lo &
     
@@ -94,3 +94,14 @@ This will enable you to check that data is being intercepted. It can also be use
 
 https://github.com/user-attachments/assets/1bd87b6c-6e73-40ef-9788-73c48bbe1dd8
 
+Congratulations, you've just intercepted GSM communications. :p
+
+We can now analyze the results in `wireshark`
+
+![datas_gsm_lapdm_gsmtap](https://github.com/user-attachments/assets/6f4f2185-9b96-432e-b6ec-1df6898e56d9)
+
+We can now identify the two distinct protocols `LAPDm` and `GSMTAP`
+
+There are mainly Paging Request Type 1 (RR) packets among which an Immediate Assignment (RR) packet must be found (see filter in the screenshot). This will make it possible to find the SDCCH time slot in packets containing a Channel Description.
+
+![datas_gsm_lapdm_gsmtap](https://github.com/user-attachments/assets/8d52eb57-3412-4914-9f0e-3aa7abbab927)
