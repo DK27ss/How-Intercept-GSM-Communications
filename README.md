@@ -164,7 +164,7 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
 
 ## GSM Evil 2
 
-Evil2 gives the same information, except that it has a web interface, a bit buggy, with the possibility of intercepting sms directly. I tested it but no conclusive results. It would be better to refer to Kraken or consider write a PoC.
+`Evil2` gives the same information, except that it has a web interface, a `buggy`, with the possibility of intercepting `SMS`. I tested it but no conclusive results. It would be better to refer to `Kraken` or consider write a `PoC`.
 
     sudo apt install build-essential libtool automake autoconf librtlsdr-dev libfftw3-dev
     git clone https://github.com/steve-m/kalibrate-rtl
@@ -179,3 +179,23 @@ Then run with:
     python3 GsmEvil.py --host=localhost
 
 ![evill](https://github.com/user-attachments/assets/f4cab33a-0bce-486f-b314-035361fa3890)
+
+You can then access the web interface on `127.0.0.1`
+
+## Some useful resources
+
+https://lemnet.fr/blog/post/interception-passive-sans-imsi-catcher-et-decodage-de-flux-gsm-avec-gr-gsm
+https://connect.ed-diamond.com/MISC/mischs-016/interception-passive-et-decodage-de-flux-gsm-avec-gr-gsm
+https://github.com/bkerler/gr-gsm
+https://osmocom.org/projects/gr-gsm/wiki/Installation
+https://github.com/ptrkrysik/gr-gsm/wiki/Usage
+https://github.com/joswr1ght/kraken
+https://payatu.com/blog/passive-gsm-sniffing-with-software-defined-radio/
+https://www.rtl-sdr.com/rtl-sdr-tutorial-analyzing-gsm-with-airprobe-and-wireshark/
+https://github.com/Scrut1ny/GSM-Sniffing-Guide
+https://github.com/ninjhacks/gsmevil2
+https://github.com/Oros42/IMSI-catcher
+https://www.mirlabs.org/ijcisim/regular_papers_2022/IJCISIM_12.pdf
+https://brmlab.cz/project/gsm/deka/attack-theory
+https://arxiv.org/vc/arxiv/papers/1305/1305.6817v1.pdf
+https://eprint.iacr.org/2008/147.pdf
