@@ -99,6 +99,7 @@ Congratulations, you've just intercepted GSM communications. :p
 We can now analyze the results in `wireshark`
 
 ![datas_gsm_lapdm_gsmtap](https://github.com/user-attachments/assets/6f4f2185-9b96-432e-b6ec-1df6898e56d9)
+![lapdm](https://github.com/user-attachments/assets/5978c8f1-84e3-4266-a860-d7c69b19ed4d)
 
 We can now identify the two distinct protocols `LAPDm` and `GSMTAP`
 
