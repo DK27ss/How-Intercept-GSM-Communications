@@ -120,7 +120,7 @@ Now let's filter with `lapdm` in wireshark.
 
 You need to find a `Ciphering Mode Command` (RR) packet. This determines the cipher mode `(A5/1 or A5/3)` in `Cipher Mode Setting`. If it's `A5/3`, although `grgsm_decode` supports it, as it can't be `broken`, we won't be able to read the `SMS content` without knowing the key. On the other hand, if it's `A5/1`, we can break the key with `kraken` and read the `SMS content`. The following screenshot shows that, in our case, the key is `A5/1` with an `SDCCH/8` channel.
 
-    grgsm_decode -c capture_936.cfile -a 5 -m SDCCH8 -t 1
+    grgsm_decode -c capture.cfile -a 5 -m SDCCH8 -t 1
 
 ![a51](https://github.com/user-attachments/assets/882d424a-2449-4bf4-86f4-fbb37b80c885)
 
