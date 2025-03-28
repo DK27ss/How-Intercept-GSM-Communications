@@ -134,7 +134,7 @@ This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfol
 
 But it is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
 
-Open-source tools such as IMSI-catcher, GsmEvil2 and Airprobe can also produce very interesting results. 
+Open-source tools such as [IMSI-catcher](https://github.com/Oros42/IMSI-catcher), [GsmEvil2](https://github.com/ninjhacks/gsmevil2) and [Airprobe](https://github.com/iamckn/airprobe) can also produce very interesting results. 
 
 A quick look at the results of these tools ^^
 
@@ -170,7 +170,7 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
     pip3 install -r requirements.txt
     python GsmEvil.py
 
-// Kalibrate (find the gsm frequency on which you capture sms or imsi. Using kalibrate, you'll get all your frequencies from nearby gsm base stations.)
+// Kalibrate (find the gsm frequency on which you capture sms or imsi. Using `kalibrate`, you'll get all your frequencies from nearby gsm base stations.)
 
     sudo apt install build-essential libtool automake autoconf librtlsdr-dev libfftw3-dev
     git clone https://github.com/steve-m/kalibrate-rtl
@@ -192,9 +192,9 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
     	chan: 11 (937.2MHz + 308Hz)	power: 4540354.88
     ...
 
-Then run with:
+Then run with: (also with grgsm_livemon)
 
-    python3 GsmEvil.py --host=localhost
+    python3 GsmEvil.py --host=localhost 
 
 ![evill](https://github.com/user-attachments/assets/f4cab33a-0bce-486f-b314-035361fa3890)
 
