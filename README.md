@@ -149,7 +149,6 @@ A quick look at the results of these tools ^^
 `Dragon` saves us time with the prerequisites already natively installed in the `OS`. All we have to do is run our commands.
 
 ![requirements](https://github.com/user-attachments/assets/1f75a914-0f0f-4297-b304-6c0993793f5c)
-![imsi](https://github.com/user-attachments/assets/f7bdb296-2a74-4a3d-98f0-a8fb9193a355)
 
 We can use the `-h` command to `list` the `available options`, as with any other `CLI` program.
 
