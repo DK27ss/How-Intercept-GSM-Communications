@@ -93,7 +93,7 @@ Even without recognition, it is still possible to use freq-by-freq to find the f
 
 Once this has been done, we can move on to using `grgsm_livemon`
 
-Next, open `wireshark`, grgsm_livemon, it sends data in GSMTAP format on the loopback interface on UDP port 4729. So, to see the data, before running grgsm_decode, we launch wireshark with the following command, or manually if you have problems opening it in `CLI`.
+Next, open `wireshark`, grgsm_livemon, it sends data in GSMTAP format on the loopback interface on `UDP` port `4729`. So, to see the data, before running `grgsm_decode`, we launch `wireshark` with the following command, or manually if you have problems opening it in `CLI`.
 
     sudo wireshark-gtk -k -f udp -Y gsmtap -i lo &
     
