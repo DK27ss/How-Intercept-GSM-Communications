@@ -164,6 +164,18 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
 
 ## GSM Evil 2
 
+Evil2 gives the same information, except that it has a web interface, a bit buggy, with the possibility of intercepting sms directly. I tested it but no conclusive results. It would be better to refer to Kraken or consider write a PoC.
+
+    sudo apt install build-essential libtool automake autoconf librtlsdr-dev libfftw3-dev
+    git clone https://github.com/steve-m/kalibrate-rtl
+    cd kalibrate-rtl
+    ./bootstrap && CXXFLAGS='-W -Wall -O3'
+    ./configure
+    make
+    sudo make install
+
+Then run with:
+
+    python3 GsmEvil.py --host=localhost
+
 ![evill](https://github.com/user-attachments/assets/f4cab33a-0bce-486f-b314-035361fa3890)
-
-
