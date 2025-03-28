@@ -110,6 +110,8 @@ You need to find a `Ciphering Mode Command` (RR) packet. This determines the cip
 
     grgsm_decode -c capture_936.cfile -a 5 -m SDCCH8 -t 1
 
+![a51](https://github.com/user-attachments/assets/882d424a-2449-4bf4-86f4-fbb37b80c885)
+
 To decode `SDCCH/8`, on `time slot 1`, even though in my case I didn't even need it, a simple filter in wireshark was enough.
 
 If you want to go further, you can use the following command, but I won't go any further than decrypting GSM communications protocols in this write-up
@@ -118,4 +120,6 @@ If you want to go further, you can use the following command, but I won't go any
 
 This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfold `TP-User-Data` to read the contents of the `SMS`. :p
 
-It is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
+But it is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
+
+
