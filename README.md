@@ -48,6 +48,7 @@ I recommend the gr-gsm [fork](https://github.com/bkerler/gr-gsm) for `GNU RADIO`
     make
 
 ![Capture](https://github.com/user-attachments/assets/4159b9b2-6837-4d70-8e64-43ee380d693d)
+![Capture](https://github.com/user-attachments/assets/954e4797-5c52-4ca1-b329-c96ea4938392)
 
 Once `gr-gsm` has been installed, simply browse the directories to launch the various tools:
 
