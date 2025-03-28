@@ -102,6 +102,20 @@ We can now analyze the results in `wireshark`
 
 We can now identify the two distinct protocols `LAPDm` and `GSMTAP`
 
-There are mainly Paging Request Type 1 (RR) packets among which an Immediate Assignment (RR) packet must be found (see filter in the screenshot). This will make it possible to find the SDCCH time slot in packets containing a Channel Description.
+There are mainly `Paging Request Type 1` (RR) packets among which an `Immediate Assignment` (RR) packet must be found. This will make it possible to find the `SDCCH` time slot in packets containing a `Channel Description`.
 
-![datas_gsm_lapdm_gsmtap](https://github.com/user-attachments/assets/8d52eb57-3412-4914-9f0e-3aa7abbab927)
+Now let's filter with `lapdm` in wireshark.
+
+You need to find a `Ciphering Mode Command` (RR) packet. This determines the cipher mode `(A5/1 or A5/3)` in `Cipher Mode Setting`. If it's `A5/3`, although `grgsm_decode` supports it, as it can't be `broken`, we won't be able to read the `SMS content` without knowing the key. On the other hand, if it's `A5/1`, we can break the key with `kraken` and read the `SMS content`. The following screenshot shows that, in our case, the key is `A5/1` with an `SDCCH/8` channel.
+
+    grgsm_decode -c capture_936.cfile -a 5 -m SDCCH8 -t 1
+
+To decode `SDCCH/8`, on `time slot 1`, even though in my case I didn't even need it, a simple filter in wireshark was enough.
+
+If you want to go further, you can use the following command, but I won't go any further than decrypting GSM communications protocols in this write-up
+
+    grgsm_decode -c capture.cfile -a 5 -m SDCCH8 -t 1 -e 1 -k KEY (Ex: F5C55DB5E6E8B694)
+
+This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfold `TP-User-Data` to read the contents of the `SMS`. :p
+
+It is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
