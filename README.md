@@ -166,6 +166,12 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
 
 `Evil2` gives the same information, except that it has a web interface, a `buggy`, with the possibility of intercepting `SMS`. I tested it but no conclusive results. It would be better to refer to `Kraken` or consider write a `PoC`.
 
+    git clone https://github.com/ninjhacks/gsmevil2
+    pip3 install -r requirements.txt
+    python GsmEvil.py
+
+// Kalibrate (find the gsm frequency on which you capture sms or imsi. Using kalibrate, you'll get all your frequencies from nearby gsm base stations.)
+
     sudo apt install build-essential libtool automake autoconf librtlsdr-dev libfftw3-dev
     git clone https://github.com/steve-m/kalibrate-rtl
     cd kalibrate-rtl
@@ -173,6 +179,18 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
     ./configure
     make
     sudo make install
+
+// Quick scan with Kalibrate
+
+    kal -s GSM900
+
+// Output (Example)
+
+    kal: Scanning for GSM-900 base stations.
+    GSM-900:
+    	chan: 4 (935.8MHz + 320Hz)	power: 1829406.95
+    	chan: 11 (937.2MHz + 308Hz)	power: 4540354.88
+    ...
 
 Then run with:
 
@@ -205,11 +223,3 @@ https://github.com/Scrut1ny/GSM-Sniffing-Guide
 https://github.com/ninjhacks/gsmevil2
 
 https://github.com/Oros42/IMSI-catcher
-
-https://www.mirlabs.org/ijcisim/regular_papers_2022/IJCISIM_12.pdf
-
-https://brmlab.cz/project/gsm/deka/attack-theory
-
-https://arxiv.org/vc/arxiv/papers/1305/1305.6817v1.pdf
-
-https://eprint.iacr.org/2008/147.pdf
