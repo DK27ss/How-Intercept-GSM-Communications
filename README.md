@@ -171,7 +171,7 @@ https://github.com/user-attachments/assets/a1724378-6bd8-41aa-aecf-aae8555a5e9a
 
 ## GSM Evil 2
 
-`Evil2` gives the same information, except that it has a web interface, a `buggy`, with the possibility of intercepting `SMS`. I tested it but no conclusive results. It would be better to refer to `Kraken` or consider write a `PoC`.
+`Evil2` gives the same information, except that it has a web interface, with the possibility of intercepting `SMS`. I tested it but no conclusive results. It would be better to refer to `Kraken` or consider write a `PoC`.
 
     git clone https://github.com/ninjhacks/gsmevil2
     pip3 install -r requirements.txt
