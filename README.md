@@ -95,7 +95,7 @@ Once this has been done, we can move on to using `grgsm_livemon`
 
 Next, open `wireshark`, grgsm_livemon, it sends data in GSMTAP format on the loopback interface on `UDP` port `4729`. So, to see the data, before running `grgsm_decode`, we launch `wireshark` with the following command, or manually if you have problems opening it in `CLI`.
 
-    sudo wireshark-gtk -k -f udp -Y gsmtap -i lo &
+    sudo wireshark -k -f udp -Y gsmtap -i lo &
     
 ![run_wireshark_cli](https://github.com/user-attachments/assets/3a5d125e-a832-4620-bbe9-4b8e22329d78)
 
@@ -133,6 +133,13 @@ If you want to go further, you can use the following command, but I won't go any
 This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfold `TP-User-Data` to read the contents of the `SMS` :p
 
 But it is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
+
+`DTAP` packets are particularly interesting because they contain important information such as `LAI` or `IMSI`.
+
+![imsii](https://github.com/user-attachments/assets/25cd2053-f3a4-4665-a21a-fc4700217761)
+![orange](https://github.com/user-attachments/assets/d2c78f32-329f-44d5-898a-5fb10a589394)
+
+these are also the ones we will look for in order to read the decrypted `SMS` with `grgsm_decode`
 
 Open-source tools such as [IMSI-catcher](https://github.com/Oros42/IMSI-catcher), [GsmEvil2](https://github.com/ninjhacks/gsmevil2) and [Airprobe](https://github.com/iamckn/airprobe) can also produce very interesting results. 
 
