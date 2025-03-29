@@ -134,12 +134,10 @@ This allows you to search for a `CP-DATA` packet with `gsm_sms` filter and unfol
 
 But it is not currently possible to decode the uplink alone with `grgsm_decode`. However, when the `MS` sends an `SMS`, the `BTS` acknowledges it with a `CP-ACK` `SMS` packet on the downlink.
 
-`DTAP` packets are particularly interesting because they contain important information such as `LAI` or `IMSI`.
+`DTAP` packets are particularly interesting because they contain important information such as `LAI` or `IMSI`. These are also the ones we will look for in order to read the decrypted `SMS` with `grgsm_decode`
 
 ![imsii](https://github.com/user-attachments/assets/25cd2053-f3a4-4665-a21a-fc4700217761)
 ![orange](https://github.com/user-attachments/assets/d2c78f32-329f-44d5-898a-5fb10a589394)
-
-these are also the ones we will look for in order to read the decrypted `SMS` with `grgsm_decode`
 
 Open-source tools such as [IMSI-catcher](https://github.com/Oros42/IMSI-catcher), [GsmEvil2](https://github.com/ninjhacks/gsmevil2) and [Airprobe](https://github.com/iamckn/airprobe) can also produce very interesting results. 
 
