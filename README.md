@@ -146,7 +146,7 @@ A quick look at the results of these tools ^^
 ## IMSI-Catcher
 
 ![imsicatch](https://github.com/user-attachments/assets/8168e20e-8f96-4b68-bb6c-430f60fef75c)
-![image](https://github.com/user-attachments/assets/d1a6cce9-72a0-4910-b721-bbdf1e8c9cbd)
+![Capture](https://github.com/user-attachments/assets/4a02acc7-4b5a-4453-9d5b-a9d14801ab92)
 
 
     git clone https://github.com/Oros42/IMSI-catcher
