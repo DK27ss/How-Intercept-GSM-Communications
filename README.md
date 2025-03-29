@@ -200,6 +200,8 @@ Then run with: (also with grgsm_livemon)
 
 You can then access the web interface on `127.0.0.1`
 
+![webapp](https://github.com/user-attachments/assets/81761556-83c1-4fd4-aca2-374f30c1cad4)
+
 ## Some useful resources
 
 https://lemnet.fr/blog/post/interception-passive-sans-imsi-catcher-et-decodage-de-flux-gsm-avec-gr-gsm
